@@ -1,4 +1,5 @@
 def exercicio1():
+    #Cotação do dia 28/03/2025
     print('\nBem-vindo(a) ao conversor de moedas')
 
     reais = float(input('\nDigite o valor: R$ '))
