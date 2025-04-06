@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1743806268 source:c:\users\labsfiap\downloads\checkpoint1_patrick\main.c
+	<stdio.h>
+	<stdlib.h>
+
