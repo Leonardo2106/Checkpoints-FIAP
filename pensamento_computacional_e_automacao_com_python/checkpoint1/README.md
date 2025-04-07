@@ -41,3 +41,7 @@ git clone https://github.com/Leonardo2106/Checkpoints-FIAP
 cd pensamento_computacional_e_automacao_com_python
 cd checkpoint1
 pyhton checkpoint1.py
+```
+---
+## Professor de Pensamento Computacional e Automação com Python
+**`Alexandre Russi Jr.`** [Github - Alexandrerussi](https://github.com/alexandrerussi)
