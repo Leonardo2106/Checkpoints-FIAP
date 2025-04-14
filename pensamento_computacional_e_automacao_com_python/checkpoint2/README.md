@@ -106,6 +106,16 @@ perfil.
     - Mostrar o valor total com juros
     - Valor de cada parcela
     - Juros totais pagos
+   
+---
+
+📦 **Instalação**  
+```bash
+git clone https://github.com/Leonardo2106/Checkpoints-FIAP 
+cd pensamento_computacional_e_automacao_com_python
+cd checkpoint2
+pip install -r requirements.txt
+```
 
 ---
 
