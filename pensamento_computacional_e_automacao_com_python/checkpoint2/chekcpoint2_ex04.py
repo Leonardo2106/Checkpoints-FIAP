@@ -52,4 +52,5 @@ print(alerta) # printar o alerta se tiver algum impedimento
 
 if valores: # para imprimir o dataframe (se tudo der OK)
     df = pd.DataFrame(valores, columns=["Nome", "Valor Total", "Parcelas", "Valor Parcela", "Juros Totais"])
+    print(f'\n{nome}, o seu empréstimo foi aprovado!')
     print(f'\n{df}')
