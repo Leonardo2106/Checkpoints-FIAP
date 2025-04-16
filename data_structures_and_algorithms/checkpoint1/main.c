@@ -1,64 +1,48 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-#define carbo_tomate 0.031
-#define extrato_carbo 0.1333
-
-int main(){
-    int opcao, tomate, extrato;
-    float extrato_recipiente;
-
-    printf("MENU - Extrato de Tomate\n");
-    printf("Escolha uma opção (1-4):\t");
-    scanf("%i", &opcao);
-
-    switch(opcao){
-        case 1:
-            printf("\nOpção: A\n");
-
-            printf("\nDigite o peso do tomate (em gramas):\t");
-            scanf("%i", &tomate);
-
-            float calculo1 = tomate * carbo_tomate;
-
-            printf("\n%i g de tomate possui %.2f g de carboidrato.\n", tomate, calculo1);
-            break;
-
-        case 2:
-            printf("\nOpção: B\n");
-
-            printf("\nQuantidade de carboidrato em 1 colher de sopa\n(15 g) de extrato de tomate: %.2f g.\n", extrato_carbo * 15);
-            break;
-
-        case 3:
-            printf("\nOpção: C\n");
-
-            printf("\nDigite o peso do tomate (em gramas):\t");
-            scanf("%i", &tomate);
-            printf("Digite o peso do extrato (em gramas):\t");
-            scanf("%i", &extrato);
-
-            float calculo_tomate = tomate * carbo_tomate;
-            float calculo_extrato = extrato * extrato_carbo;
-
-            printf("\nTotal de carboidrato no molho: %.2f g.\n", calculo_tomate + calculo_extrato);
-
-            if(calculo_tomate > calculo_extrato){
-                printf("\nO tomate contribuiu mais com os carboidratos do molho.\n");
-            }else {
-                printf("\nO extrato de tomate contribuiu mais com os\ncarboidratos do molho.\n");
-            }
-            break;
-
-        case 4:
-            printf("\nOpção: D\n");
-
-            printf("\nDigite a capacidade do recipiente (em gramas):\t");
-            scanf("%f", &extrato_recipiente);
-
-            float calculo2 = extrato_recipiente * (600.0 / 100.0);
-
-            printf("\nSerão necessarios aproximadamente %.2f g de\ntomates para fazer %.2f g de extrato\nartesanal.\n", calculo2, extrato_recipiente);
-            break;
-    }
+ 
+int main() {
+    int opcao;
+    float tomate, extrato, peso, calculo1, calculo2;
+ 
+    do {
+        printf("1. Carboidratos por grama de tomate\n2. Carboidratos em uma colher de sopa de extrato de tomate\n3. Carboidrato no molho\n4. Quatidade de tomates para fazer molho artesanal\n5. Sair\n");
+        printf("\nEscolha a opcao: \t");
+        scanf("%d", &opcao);
+ 
+        switch(opcao) {
+            case 1:
+                printf("\nDigite o peso dos tomates (g): \t"); scanf("%f", &peso);
+                printf("%.2f g de tomates possui %.2f g de carboidrato.\n\n", peso,  peso * 0.031);
+                break;
+ 
+            case 2:
+                printf("\nQuantidade de carboidrato em 1 colher de sopa\n(15 g) de extrato de tomate: %.2f g.\n\n", 2.0);
+                break;
+ 
+            case 3:
+                printf("\nDigite a quantidade do tomate (g): \t"); scanf("%f", &tomate);
+                printf("Digite a quantidade do extrato (g): \t"); scanf("%f", &extrato);
+                
+                calculo1 = tomate * 0.031;
+                calculo2 = extrato * (4.0 / 30.0);
+                
+                printf("\nTotal de carboidrato: %.2f g\n", calculo1 + calculo2);
+                printf("%s para os carboidratos do molho\n\n", calculo1 > calculo2 ? "O tomate contribuiu mais" : (calculo2 > calculo1 ? "O extrato contribuiu mais" : "Ambos contribuiram"));
+                break;
+ 
+            case 4:
+                printf("\nDigite a capacidade do recipiente (g): \t"); scanf("%f", &peso);
+                printf("\nTomates necessarios: %.2fg\n\n", peso * (600 / 100));
+                break;
+ 
+            case 5:
+                printf("\nSaindo...");
+                break;
+ 
+            default:
+                printf("\nPor favor, selecione um valor valido.\n\n");
+        }
+    } while (opcao != 5);
+ 
+    return 0;
 }
