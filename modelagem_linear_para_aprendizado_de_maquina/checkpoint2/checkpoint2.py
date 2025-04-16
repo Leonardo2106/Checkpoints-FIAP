@@ -47,7 +47,7 @@ def filtro(nome, idade, genero, data_consulta):
                 print('A opçao de "Ginecologista" não está disponível para o gênero masculino.')
                 continue
             if (consulta == "Pediatra" and idade >= 18):
-                print('A opcao de "Pediatra" não está disponível para pacientes menores de 18 anos.')
+                print('A opcao de "Pediatra" não está disponível para pacientes maiores de 18 anos.')
                 continue
             break
         except ValueError:
@@ -83,33 +83,31 @@ def filtro(nome, idade, genero, data_consulta):
         exit('\nVocê cancelou o agendamento\nCaso tenha sido um erro, repita o processo')
 
 # começo
-print('\nBem-vindo(a) ao Sistema de autoatendimento do Hospital Sr.Consultas!')
-print('Para registrarmos o seu agendamento, é necessário preencher todos os espaços solicitados'
-      ' com as informações do paciente.\n')
+print('\nBem-vindo(a) ao Sistema de autoatendimento do Hospital Sr.Consultas!\n'
+      'Para registrarmos o seu agendamento, é necessário preencher todos os espaços solicitados '
+      'com as informações do paciente\n')
 
 # separando a parte da entrada do usuário da função para poluir menos o código ;)
-while True:
-    nome_completo = input('Digite o nome completo do paciente: ')
-    nome = nome_completo.split()[0]
+nome_completo = input('Digite o nome completo do paciente: ')
+nome = nome_completo.split()[0]
 
-    idade = int(input(f'{nome}, digite sua idade: '))
+idade = int(input(f'{nome}, digite sua idade: '))
 
-    """
-    garantindo que o genero fique em maiusculo e tambem
-    garantindo que ele será digitado m ou f
-    """
-    genero = input(f'{nome}, informe o seu gênero (M/F): ').upper()
-    while genero not in ['M', 'F']:
-        print("Por favor, selecione o gênero do paciente, sendo M para Masculino e F para Feminino.")
-        genero = input("Gênero (M/F): ").upper()
+"""
+garantindo que o genero fique em maiusculo e tambem
+garantindo que ele será digitado m ou f
+"""
+genero = input(f'{nome}, informe o seu gênero (M/F): ').upper()
+while genero not in ['M', 'F']:
+    print("Por favor, selecione o gênero do paciente, sendo M para Masculino e F para Feminino.")
+    genero = input("Gênero (M/F): ").upper()
 
-    data_consulta = input('Digite a data da consulta (dd/mm): ')
-    dia, mes = map(int, data_consulta.split('/')) # transformar a str em int e divir ela em dia e mes
+data_consulta = input('Digite a data da consulta (dd/mm): ')
+dia, mes = map(int, data_consulta.split('/')) # transforma a str em int e divide ela em dia e mes
 
-    filtro(nome, idade, genero, data_consulta)
+filtro(nome, idade, genero, data_consulta)
 
-    # criando um dataFrame para organizar o resumo da consulta
-    df = pd.DataFrame(valores, columns=['Paciente', 'Consulta', 'Data', 'Valor', 'Pagamento'])
-    print(f'\nAtendimento finalizado. Obrigado!')
-    print(f'\n{df}')
-    break
+# criando um dataFrame para organizar o resumo da consulta
+df = pd.DataFrame(valores, columns=['Paciente', 'Consulta', 'Data', 'Valor', 'Pagamento'])
+print(f'\nAtendimento finalizado. Obrigado!')
+print(f'\n{df}')
