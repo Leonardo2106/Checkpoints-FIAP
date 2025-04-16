@@ -17,13 +17,13 @@ origem
 - O valor total transportado pelo caminhão (carga + impostos)
 
 #### Utilize as tabelas abaixo:
-| Estado | Imposto | Código da Carga | Preço por Kg |
-| - | - | - | - |
-| 1 | 35% | 10 a 20 | R$ 100,00 |
-| 2 | 25% | 21 a 30 | R$ 250,00 |
-| 3 | 35% | 31 a 40 | R$ 340,00 |
-| 4 | 25% | - | - |
-| 5 | isento | - | - |
+| Estado | Imposto |  | Código da Carga | Preço por Kg |
+| - | - | - | - | - |
+| 1 | 35% |  | 10 a 20 | R$ 100,00 |
+| 2 | 25% |  | 21 a 30 | R$ 250,00 |
+| 3 | 15% |  | 31 a 40 | R$ 340,00 |
+| 4 | 5% |  | - | - |
+| 5 | isento  |  | - | - |
 
 ---
 
