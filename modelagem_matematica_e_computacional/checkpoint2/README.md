@@ -58,3 +58,16 @@ Qual é o resultado?
 4b) Compare com o número de euler np.e. Há semelhanças e diferenças?
 
 4c) Compare com o resultado da função np.exp(1). Há semelhanças ou diferenças?
+
+---
+
+### 📦 Instalação
+```
+bash
+
+git clone https://github.com/Leonardo2106/Checkpoints-FIAP
+cd modelagem_matematica_e_computacional
+cd checkpoint2
+pip install -r requirements.txt
+python checkpoint2.py
+```
