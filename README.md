@@ -28,12 +28,12 @@
 
 ### 📦 Instalação
 
-- **Clone o repositório**
+**Clone o repositório:**
 ```bash
 git clone https://github.com/Leonardo2106/Checkpoints-FIAP.git
 ```
 
-- **Para navegar:**
+**Para navegar:**
 ```bash
 ls
 
